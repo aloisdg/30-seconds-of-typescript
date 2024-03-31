@@ -3,13 +3,11 @@ import { useWindowSize } from "@docusaurus/theme-common";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
-import Head from "@docusaurus/Head";
 import Translate, { translate } from "@docusaurus/Translate";
-
 import clsx from "clsx";
 import React from "react";
-// import AdSense from "react-adsense";
 import styles from "./styles.module.css";
+
 const NoteCh = () => (
   <p className="hero__subtitle">
     <Translate id="home.ch_warn">
@@ -74,9 +72,6 @@ function Home() {
   return (
     <Layout title={siteConfig.title} description={siteConfig.tagline}>
       <header className={clsx("hero hero--primary", styles.heroBanner)}>
-        <Head>
-        {/* <script type='text/javascript' src=''></script> */}
-        </Head>
         <div className="container">
           <h1 className="hero__title">
             {`Welcome to  ${translate({
@@ -109,7 +104,7 @@ function Home() {
       <main>
         <section className={styles.centerContent}>
           <div style={{ display: "flex", flexDirection: "column" }}>
-            <video src={"how_to_access_page.mp4"} controls autoPlay />
+            <video src={"how_to_access_page.mp4"} controls autoPlay={false} />
           </div>
         </section>
         {features && features.length > 0 && (

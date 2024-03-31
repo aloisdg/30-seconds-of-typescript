@@ -1,10 +1,10 @@
 ---
-title: randomInt [随机的 Int]
-tags: [math, random, beginner]
+title: isNull
+tags: [type, beginner]
 author_title: Deepak Vishwakarma
 author_url: https://github.com/deepakshrma
 author_image_url: https://avatars2.githubusercontent.com/u/7682731?s=400
-description: 在 TypeScript、JavaScript 和 Deno 中实现 "randomInt" 的方法。
+description: 在 TypeScript、JavaScript 和 Deno 中实现 "isNull" 的方法。
 image: https://www.positronx.io/wp-content/uploads/2018/11/positronx-banner-1152-1.jpg
 ---
 
@@ -12,15 +12,14 @@ image: https://www.positronx.io/wp-content/uploads/2018/11/positronx-banner-1152
 ![JS](https://img.shields.io/badge/supports-javascript-yellow.svg?style=flat-square)
 ![Deno](https://img.shields.io/badge/supports-deno-green.svg?style=flat-square)
 
-返回指定范围内的随机整数。
+如果指定的值是 `null`，则返回 `true`，否则返回 `false`。
 
-使用 `Math.random()` 要生成一个随机数并将其映射到所需范围 `Math.floor()` 使其成为整数。
+使用严格相等运算符来检查 `val` 的值是否等于 `null`。
 
-```ts title="typescript"
-const randomInt = (min, max) =>
-  Math.floor(Math.random() * (max - min + 1)) + min;
+```js
+const isNull = (val) => val === null;
 ```
 
-```ts title="typescript"
-randomInt(0, 5); // 2
+```js
+isNull(null); // true
 ```

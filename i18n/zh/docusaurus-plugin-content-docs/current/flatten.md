@@ -4,7 +4,7 @@ tags: [array, intermediate]
 author_title: Deepak Vishwakarma
 author_url: https://github.com/deepakshrma
 author_image_url: https://avatars2.githubusercontent.com/u/7682731?s=400
-description: Implementation of "flatten" in typescript, javascript and deno.
+description: 在 TypeScript、JavaScript 和 Deno 中实现 "flatten" 的方法。
 image: https://www.positronx.io/wp-content/uploads/2018/11/positronx-banner-1152-1.jpg
 ---
 

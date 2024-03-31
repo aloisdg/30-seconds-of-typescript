@@ -1,10 +1,10 @@
 ---
-title: maxDate [最大日期]
-tags: [date, math, beginner]
+title: compact [压缩]
+tags: [array, beginner]
 author_title: Deepak Vishwakarma
 author_url: https://github.com/deepakshrma
 author_image_url: https://avatars2.githubusercontent.com/u/7682731?s=400
-description: 在 TypeScript、JavaScript 和 Deno 中实现 "maxDate" 的方法。
+description: 在 TypeScript、JavaScript 和 Deno 中实现 "compact" 的方法。
 image: https://www.positronx.io/wp-content/uploads/2018/11/positronx-banner-1152-1.jpg
 ---
 
@@ -12,20 +12,14 @@ image: https://www.positronx.io/wp-content/uploads/2018/11/positronx-banner-1152
 ![JS](https://img.shields.io/badge/supports-javascript-yellow.svg?style=flat-square)
 ![Deno](https://img.shields.io/badge/supports-deno-green.svg?style=flat-square)
 
-返回给定日期的最大值。
+从数组中移除假值。
 
-使用 `Math.max` 使用 ES6 扩展语法查找最大日期值，`new Date（）`将其转换为 `Date` 对象。
+使用 `Array.prototype.filter()` 来过滤掉假值 `（false、null、0、""、undefined 和 NaN）`。
 
 ```ts title="typescript"
-const maxDate = (dates: Date[]) => new Date(Math.max(...dates.map(Number)));
+const compact = (arr: any[]) => arr.filter(Boolean);
 ```
 
 ```ts title="typescript"
-const array = [
-  new Date(2017, 4, 13),
-  new Date(2018, 2, 12),
-  new Date(2016, 0, 10),
-  new Date(2016, 0, 9),
-];
-maxDate(array); // 2018-03-11T22:00:00.000Z
+compact([0, 1, false, 2, "", 3, "a", Number("e") * 23, NaN, "s", 34]); // [ 1, 2, 3, 'a', 's', 34 ]
 ```

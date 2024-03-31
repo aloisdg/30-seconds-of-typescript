@@ -5,7 +5,7 @@ tags: [introduction, beginner]
 author_title: Deepak Vishwakarma
 author_url: https://github.com/deepakshrma
 author_image_url: https://avatars2.githubusercontent.com/u/7682731?s=400
-description: Implementation of "30-seconds-of-typescript" in typescript, javascript and deno.
+description: 在 TypeScript、JavaScript 和 Deno 中实现 "30-seconds-of-typescript" 的方法。
 image: https://www.positronx.io/wp-content/uploads/2018/11/positronx-banner-1152-1.jpg
 ---
 
